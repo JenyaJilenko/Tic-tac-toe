@@ -2,16 +2,32 @@
   "name": "tic-tac-toe-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.9.0",
+    "enzyme-to-json": "^3.3.5",
+    "flow-bin": "^0.98.1",
+    "jest": "^24.8.0",
+    "react-addons-test-utils": "^15.6.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +42,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "setupFiles": ["./test/jestsetup.js"],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
     ]
   }
 }
