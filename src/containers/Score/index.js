@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 type ScoreProps = {
@@ -14,11 +13,6 @@ const Score = ({ cross, nought }: ScoreProps) => (
     <Score.Cross>X: { cross }</Score.Cross> | <Score.Nought>O: { nought } </Score.Nought>
   </Score.Board>
 );
-
-Score.propTypes = {
-  cross: PropTypes.number,
-  nought: PropTypes.number,
-};
 
 Score.Board = styled.div`
   display          : flex;

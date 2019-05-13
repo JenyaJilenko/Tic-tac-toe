@@ -9,7 +9,7 @@ module.exports = {
     '@babel/preset-react',
     '@babel/preset-flow'
   ],
-  plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-syntax-dynamic-import'],
+  plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-syntax-dynamic-import', 'babel-plugin-styled-components'],
   env: {
     production: {
       only: ['app'],
@@ -29,7 +29,8 @@ module.exports = {
         '@babel/plugin-proposal-class-properties',
         'transform-es2015-modules-commonjs',
         'babel-plugin-dynamic-import-node',
-        '@babel/transform-runtime'
+        '@babel/transform-runtime',
+        'babel-plugin-styled-components'
       ],
     },
   }

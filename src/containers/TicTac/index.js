@@ -19,7 +19,7 @@ import {
 
 import TicTac from './TicTac';
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   squares: selectSquares(state),
   gameover: selectGameover(state),
   draw: selectDraw(state),
@@ -28,7 +28,7 @@ const mapStateToProps = (state) => ({
   sets: selectSets(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   movePlayer: (row, col) => dispatch(movePlayer(row, col)),
   stepBack: () => dispatch(stepBack()),
   stepForward: () => dispatch(stepForward()),
